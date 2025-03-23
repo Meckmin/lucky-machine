@@ -13,13 +13,20 @@ public class Main {
         String[] row;
         String yesOrNo;
 
+        System.out.println("*********************");
+        System.out.println("Welcome to Java Slots");
+        System.out.println("*********************");
+
         do {
-            System.out.println("*********************");
-            System.out.println("Welcome to Java Slots");
-            System.out.println("*********************");
+
             betAmount = startGame(balance);
             row = generateSlot();
             balance += getPayout(row, betAmount);
+
+            if (balance == 0){
+                System.out.println("\nGame Over!");
+                return;
+            }
 
             while(true) {
                 scanner.nextLine();
