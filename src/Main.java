@@ -28,8 +28,8 @@ public class Main {
                 return;
             }
 
+            scanner.nextLine();
             while(true) {
-                scanner.nextLine();
                 System.out.print("Do you want to play again? (yes/no): ");
                 yesOrNo = scanner.nextLine();
                 if(yesOrNo.equalsIgnoreCase("yes") || yesOrNo.equalsIgnoreCase("no")){
